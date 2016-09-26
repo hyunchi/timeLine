@@ -1,0 +1,229 @@
+/*整体网页*/
+body{
+    margin: 0px;
+    font: 12px 微软雅黑,宋体,Arial,sans-serif;
+}
+html,body{
+    -webkit-text-size-adjust: none;
+    background: #f7f7f7;
+}
+div,form,input,textarea,p,ul,li,dl,dt,dd,h1,table,h2 {
+    padding:0;
+    margin:0;
+}
+li,ol,ul{
+    list-style-type:none ;
+}
+
+.content{
+    position: relative;
+    margin: 0px auto;
+    min-height: 720px;
+    padding: 50px 0;
+    width: 100%;
+    background: #3a3c48 url("../img/log/content-bg.png");
+}
+.content .wrapper{
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+    background: url("../img/log/release-bg.png") repeat-y right top;
+}
+.content .light{
+    position: absolute;
+    left: 55px;
+    top: -50px;
+    width: 152px;
+    height: 191px;
+    background: url("../img/log/light-top.png") no-repeat top center;
+}
+.content .light i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: url("../img/log/light.png") no-repeat top center;
+}
+/*分割线*/
+hr{
+    height: 0;
+    border-left: none;
+    border-right: 0px;
+    border-top: 1px dashed #2d2f34;
+    border-bottom: 1px dashed #474954;
+}
+.content .line-left{
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    width: 70px;
+}
+.content .line-right{
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    width: 460px;
+}
+/*main*/
+.content .main{
+    background: url("../img/log/line-bg.png") repeat-y 249px 0;
+}
+/*标题*/
+.content .main .title{
+    position: absolute;
+    line-height: 40px;
+    padding-left:67px ;
+    left: 230px;
+    top: 0px;
+    color: #58a6fb;
+    font-size: 24px;
+    background: url("../img/log/clock.png") no-repeat left top;
+}
+.content .main .period{
+    position: relative;
+    z-index: 100;
+}
+a{
+    color: #666;
+    text-decoration: none;
+}
+a:hover{
+    color: #F60;
+ //   text-decoration: underline;
+    cursor: pointer;
+}
+.content .main .period h2{
+    height: 40px;
+    width: 180px;
+    padding-right: 30px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: right;
+}
+.content .main .period h2 a {
+    color: #58a6fb;
+}
+.content .main .period h2 i{
+    display:block;
+    position:relative;
+    height:0;
+    width:0;
+    left:190px;
+    top:-20px;
+    border-style:solid;
+    border-width:6px;
+    border-color:#59a7fb transparent transparent transparent;/*上边框为蓝色，其他为透明*/
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+    -webkit-transform-origin:6px 3px;
+    -moz-transform-origin:6px 3px;
+    -ms-transform-origin:6px 3px;
+    -o-transform-origin:6px 3px;
+    transform-origin:6px 3px
+}
+.content .main .period .list{
+    margin:10px 0;
+    position:relative;
+    overflow:hidden;
+    -webkit-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
+    -moz-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
+    -ms-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
+    -o-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
+    transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s
+}
+.content .main .period .list ul {
+    bottom: 0;
+}
+.content .main .period .list ul li {
+    background: url("../img/log/circle.png") no-repeat 235px 31px;
+    padding: 30px 0;
+    color: #a1a4b8;
+    font-size: 13px;
+}
+.cls {
+    zoom: 1;/*缩放比例*/
+}
+/*在被选择的元素后加入内容*/
+.cls:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.content .main .period .list ul li.highlight .date, .content .main .period .list ul li.highlight .intro {
+    color: #ec6a13;
+}
+.content .main .period .list ul li .date,.content .main .period .list ul li .version{
+    float:left;
+    display:block;
+    clear:left;
+    width:200px;
+    line-height:24px;
+    text-align:right
+}
+.content .main .period .list ul li .date{
+    font-size:18px;
+    line-height:32px;
+    color:#bec1d5
+}
+.content .main .period .list ul li .intro, .content .main .period .list ul li .more {
+    float: left;
+    display: block;
+    width: 400px;
+    margin-left: 100px;
+    line-height: 24px;
+}
+.content .main .period .list ul li .intro {
+    font-size: 18px;
+    line-height: 32px;
+    color: #63d029;
+}
+.content .wrapper:first-child .main .period.close h2 i{
+    transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg)
+}
+.content .wrapper:first-child .main .period.close .list{
+    opacity:0;
+    height:0!important;
+}
+/*底部版权*/
+.copyright{
+    text-align: center;
+}
+/*音乐播放*/
+/*@keyframes创建动画规则从0%开始到100%结束*/
+@-webkit-keyframes reverseRotataZ{
+    0%{-webkit-transform: rotateZ(0deg);}
+    100%{-webkit-transform: rotateZ(-360deg);}
+}
+@-webkit-keyframes rotataZ{
+    0%{-webkit-transform: rotateZ(0deg);}
+    100%{-webkit-transform: rotateZ(360deg);}
+}
+/*图标扩大动画*/
+@-webkit-keyframes loading{
+    25%{transform:scale(1.5);-webkit-transform:scale(1.5);}
+    50%,100%{transform:scale(1);-webkit-transform:scale(1);}
+}
+@keyframes loading{
+    25%{transform:scale(1.5);-webkit-transform:scale(1.5);}
+    50%,100%{transform:scale(1);-webkit-transform:scale(1);}
+}
+span{animation: loading ;-webkit-animation: loading; -webkit-animation-duration: 4s;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;}
+
+
+#musicControl { position:fixed;right:20px;top:20px;margin-top:0;display:inline-block;z-index:99999999}
+#musicControl a { display:inline-block;width: 25px; height: 25px;overflow:hidden;
+    background:url('../img/mcbg.png') no-repeat;background-size:100%;}
+#musicControl a audio{width:100%;height:56px;}
+#musicControl a.stop { background-position:left bottom;}
+#musicControl a.on { background-position:0px 1px;-webkit-animation: reverseRotataZ 1.2s linear infinite;}
+#music_play_filter{width:100%;height:100%;overflow:hidden;position:fixed;top:0;left:0;z-index:99999998;}
